@@ -24,13 +24,13 @@ function win(userChoice,computerChoice) {
     result_p.innerHTML = userChoice+smallUserWord+" beats "+computerChoice+smallComputerWord+". You win!!!";
 
     userChoice_div.classList.add('green-shine');
-    setTimeout(function (){userChoice_div.classList.remove('green-shine')}, 500);
+    setTimeout(() => userChoice_div.classList.remove('green-shine'), 500);
 
     document.getElementById('user-label').classList.add('green-shine');
-    setTimeout(function (){document.getElementById('user-label').classList.remove('green-shine')}, 500);
+    setTimeout(() => document.getElementById('user-label').classList.remove('green-shine'), 500);
 
     document.getElementById('computer-label').classList.add('red-shine');
-    setTimeout(function (){document.getElementById('computer-label').classList.remove('red-shine')}, 500);
+    setTimeout(() => document.getElementById('computer-label').classList.remove('red-shine'), 500);
 }
 
 function lose(userChoice,computerChoice) {
@@ -44,13 +44,13 @@ function lose(userChoice,computerChoice) {
     result_p.innerHTML = userChoice+smallUserWord+" loses to "+computerChoice+smallComputerWord+". You lost!!!";
 
     userChoice_div.classList.add('red-shine');
-    setTimeout(function (){userChoice_div.classList.remove('red-shine')}, 500);
+    setTimeout(() => userChoice_div.classList.remove('red-shine'), 500);
 
     document.getElementById('computer-label').classList.add('green-shine');
-    setTimeout(function (){document.getElementById('computer-label').classList.remove('green-shine')}, 500);
+    setTimeout(() => document.getElementById('computer-label').classList.remove('green-shine'), 500);
 
     document.getElementById('user-label').classList.add('red-shine');
-    setTimeout(function (){document.getElementById('user-label').classList.remove('red-shine')}, 500);
+    setTimeout(() => document.getElementById('user-label').classList.remove('red-shine'), 500);
 }
 
 function draw(userChoice,computerChoice) {
@@ -61,13 +61,13 @@ function draw(userChoice,computerChoice) {
     result_p.innerHTML = userChoice+smallUserWord+" equals "+computerChoice+smallComputerWord+". It's a draw!!!";
 
     userChoice_div.classList.add('gray-shine');
-    setTimeout(function (){userChoice_div.classList.remove('gray-shine')}, 500);
+    setTimeout(() => userChoice_div.classList.remove('gray-shine'), 500);
 
     document.getElementById('user-label').classList.add('gray-shine');
-    setTimeout(function (){document.getElementById('user-label').classList.remove('gray-shine')}, 500);
+    setTimeout(() => document.getElementById('user-label').classList.remove('gray-shine'), 500);
 
     document.getElementById('computer-label').classList.add('gray-shine');
-    setTimeout(function (){document.getElementById('computer-label').classList.remove('gray-shine')}, 500);
+    setTimeout(() => document.getElementById('computer-label').classList.remove('gray-shine'), 500);
 }
 
 function game(userChoice) {
@@ -92,17 +92,9 @@ function game(userChoice) {
 }
 
 function main() {
-    rock_section.addEventListener("click", function () {
-        game("rock");
-    });
-
-    paper_section.addEventListener("click", function () {
-        game("paper");
-    });
-
-    scissors_section.addEventListener("click", function () {
-        game("scissors");
-    });
+    rock_section.addEventListener("click", () => game("rock"));
+    paper_section.addEventListener("click", () => game("paper"));
+    scissors_section.addEventListener("click", () => game("scissors"));
 }
 
 
